@@ -119,7 +119,8 @@ public class NiceSpinner extends AppCompatTextView {
             Bundle bundle = (Bundle) savedState;
             selectedIndex = bundle.getInt(SELECTED_INDEX);
             if (adapter != null) {
-                setTextInternal(selectedTextFormatter.format(adapter.getItemInDataset(selectedIndex)).toString());
+                // setTextInternal(selectedTextFormatter.format(adapter.getItemInDataset(selectedIndex)).toString());
+                 setTextInternal(adapter.getItemInDataset(position));
                 adapter.setSelectedIndex(selectedIndex);
             }
 
